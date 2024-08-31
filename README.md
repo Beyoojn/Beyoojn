@@ -1,6 +1,7 @@
 # Hi there, I'm Hanif 👋
 
-🌱 Currently working on some Data Science project <br>
+Working on some Data Science project <br>
+Learning full stack <br> 
 
 # 💻 Tech Stack:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)

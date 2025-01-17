@@ -1,4 +1,6 @@
 # Hi there, I'm Hanif 👋
+This is the place when I'm get bored with electrical stuff and make something fun<br>
+When I'm not coding, I'm probably figuring out how to optimize everything—except my coffee intake<br>
 
 Working on some Data Science and Electrical Engineering Project<br>
 Learning full stack and Autocad Rightnow<br> 

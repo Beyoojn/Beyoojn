@@ -8,8 +8,6 @@ When I'm not coding, I'm probably figuring out how to optimize everything—exce
 * 🌟 Fun fact: High voltage may power cities, but coffee powers me!
 
 <!--START_SECTION:waka-->
-<img src="https://github.com/YouEclipse/YouEclipse/blob/master/gopher.gif" >
-
 <table>
 <tr>
 <td valign="top" width="50%">

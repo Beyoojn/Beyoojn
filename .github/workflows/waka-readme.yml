@@ -1,23 +1,32 @@
 name: Waka Readme
 
 on:
+  workflow_dispatch: # for manual workflow trigger
   schedule:
-    # Runs at 12am IST
-    - cron: '30 18 * * *'
-  workflow_dispatch:
+    - cron: '0 0 1 * *' # At 12:00 AM, on day 1 of the month
+
 jobs:
   update-readme:
-    name: Update Readme with Metrics
+    name: Update README with WakaTime stats
     runs-on: ubuntu-latest
     steps:
-      - uses: beyoojn/beyoojn@main
+      - uses: actions/checkout@v2 # Checks out your repository under $GITHUB_WORKSPACE, so your workflow can access it
+      - uses: athul/waka-readme@master
         with:
-          WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - uses: beyoojn/beyoojn@main
-        with:
-            WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
-            GH_TOKEN: ${{ secrets.GH_TOKEN }}
-            SHOW_OS: "False"
-            SHOW_PROJECTS: "False"
-                
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }} # The WakaTime API key to access your coding stats
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # GitHub token to commit changes to your repository
+          SHOW_OS: 'True' # Show the operating systems used
+          SHOW_PROJECTS: 'True' # Show the projects worked on
+          SHOW_EDITORS: 'True' # Show the editors used
+          SHOW_LANGUAGES: 'True' # Show the programming languages used
+          SHOW_TIMEZONE: 'True' # Show the timezone
+          SHOW_COMMIT: 'True' # Show the commit graph
+          SHOW_LINES_OF_CODE: 'True' # Show the total lines of code written
+          SHOW_LANGUAGE_PER_REPO: 'True' # Show language usage per repository
+          SHOW_LOC_CHART: 'True' # Show the lines of code chart
+          SHOW_DAYS_OF_WEEK: 'True' # Show the most productive days of the week
+          SHOW_PROFILE_VIEWS: 'False' # Show the profile views (not supported by athul/waka-readme)
+          SHOW_SHORT_INFO: 'True' # Show short info
+          LOCALE: 'en' # Set the locale/language for the stats
+          SHOW_UPDATED_DATE: 'True' # Show the last updated date for the stats
+          SHOW_TOTAL_CODE_TIME: 'True' # Show the total coding time

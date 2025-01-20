@@ -1,4 +1,4 @@
-name: Beyoojn
+name: Waka Readme
 
 on:
   schedule:
@@ -10,11 +10,11 @@ jobs:
     name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: Beyoojn/waka-readme-stats@master
+      - uses: Beyoojn/Beyoojn@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - uses: Beyoojn/waka-readme-stats@master
+      - uses: Beyoojn/Beyoojn@master
         with:
             WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
             GH_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -2,14 +2,22 @@ name: Waka Readme
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Menjalankan setiap hari
+    # Runs at 12am IST
+    - cron: '30 18 * * *'
   workflow_dispatch:
-
 jobs:
   update-readme:
+    name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: beyoojn/waka-readme@v2
+      - uses: Beyoojn/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - uses: Beyoojn/waka-readme-stats@master
+        with:
+            WAKATIME_API_KEY: ${{ secrets.WT_TOKEN }}
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
+            SHOW_OS: "False"
+            SHOW_PROJECTS: "False"
+                
